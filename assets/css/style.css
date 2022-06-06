@@ -1,0 +1,126 @@
+*{
+    
+    box-sizing: border-box;
+}
+
+html body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    display: grid;
+    /* min-height: 100vh; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-areas:
+        "nav"
+        "aside"
+        "main"
+        "footer";
+}
+
+nav,
+main,
+aside,
+footer{
+    color: white;
+    font-size: 2rem;
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    grid-area: nav;
+    background: black;
+    height: 15vh;
+}
+
+.logo{
+    padding: 1rem;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+
+.burger{
+    color: rgba(255,255,255);
+    padding: 1rem;
+}
+
+li{
+    list-style-type: none;
+}
+
+main{
+    grid-area: main;
+    background: #0d0d0d;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding: 1rem;
+    height: 80vh;
+}
+
+.mainProd{
+    display: flex;
+    flex-direction: column;
+    
+    flex:100%;
+    min-width: 100vw;
+    height: 30vh;
+    margin-top: 1rem;
+}
+
+.secondsProd{
+    
+    /* flex:50%; */
+    display: flex;
+    flex-direction: column;
+    
+    width: 50%;
+    height: 70vh;
+    padding: 1rem;
+    margin: 1rem;
+    /* order: 2; */
+
+}
+
+aside{
+    grid-area: aside;
+    background: grey;
+    height: 10vh;
+}
+
+footer{
+    grid-area: footer;
+    background: black;
+}
+
+@media screen and (min-width: 576px) {
+    body{
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr 1fr 10fr 1fr;
+        grid-template-areas:
+            "nav nav"
+            "aside main"
+            "footer footer";
+    }
+}
+    
+@media screen and (min-width: 992px) {
+    body{
+        grid-template-columns: 15% 85%;
+        grid-template-areas:
+            "nav aside"
+            "nav main"
+            "footer footer";
+    }
+}
