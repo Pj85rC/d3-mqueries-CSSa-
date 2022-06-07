@@ -23,7 +23,7 @@ footer {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   grid-area: nav;
   background: black;
@@ -54,6 +54,7 @@ nav {
 .buscar input {
   display: flex;
   border-radius: 5px;
+  width: 90%;
 }
 
 main {
@@ -170,10 +171,10 @@ a {
   }
 
   .mainProd {
-    width: 75%;
+    width: 79%;
   }
 
   .product {
-    width: 18%;
+    width: 19%;
   }
 }
