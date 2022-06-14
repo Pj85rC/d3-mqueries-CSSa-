@@ -16,7 +16,6 @@ body {
 
 nav,
 main,
-aside,
 footer {
   font-size: 2rem;
 }
@@ -27,7 +26,8 @@ nav {
   align-items: center;
   grid-area: nav;
   background: black;
-  height: 10vh;
+  padding: 1.08rem 0;
+  /* height: 10vh; */
 }
 
 .burger {
@@ -60,7 +60,7 @@ nav {
 main {
   grid-area: main;
   background-color: #0d0d0d;
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .products {
@@ -110,7 +110,7 @@ footer {
   align-items: center;
   grid-area: footer;
   background: black;
-  height: 10vh;
+  padding: 1.08rem 0;
   font-size: medium;
 }
 
@@ -121,11 +121,16 @@ a {
 
 @media (min-width: 576px) {
   body {
-    grid-template-columns: 20% 80%;
+    grid-template-rows: 12% auto 12%;
     grid-template-areas:
       "nav nav"
       "main main"
       "footer footer";
+  }
+
+  nav,
+  footer {
+    padding: 0;
   }
 
   .burger {
@@ -155,11 +160,17 @@ a {
 
 @media (min-width: 992px) {
   body {
-    grid-template-columns: 15% 85%;
     grid-template-areas:
       "nav nav"
       "main main"
       "footer footer";
+  }
+
+  nav {
+    padding: 1rem 0;
+  }
+
+  footer {
   }
 
   .menu {
